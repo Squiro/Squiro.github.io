@@ -110,8 +110,7 @@ export class PromptComponent implements OnInit, OnDestroy {
                 if (this.currentDir != 'home')
                     this.componentType.emit(this.dirComponentMap[this.currentDir]);
                 break;
-            case 'kill':
-                console.log("kill");
+            case 'kill':                
                 this.componentType.emit(KillComponent);
                 break;
             default:             

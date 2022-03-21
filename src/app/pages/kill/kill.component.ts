@@ -10,7 +10,6 @@ import { BaseComponent } from '../../shared/components/base-component/base.compo
 export class KillComponent extends BaseComponent {
     constructor(store: Store) { 
         super(store);         
-        console.log("?");
         this.addComponentString(
             [
                 'SUBJECT: SINOPOLI',
