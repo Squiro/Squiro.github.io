@@ -1,0 +1,3 @@
+<div class="input-wrapper" #prompt>
+    <p> root/{{this.currentDir}}: </p><input #userName [(ngModel)]="input" type="text" (keydown.enter)="handleInput()" autofocus>
+</div>

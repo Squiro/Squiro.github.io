@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  --main-color: #debe5f;
+  --font-family: "Courier New", "Courier", "CourierPrimeSans", monospace !important;
+  --font-size: 1em;
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  color: var(--main-color);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: var(--font-size);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--main-color);
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 1em auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.fadeIn {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  animation: fadeAnim 3.5s steps(40, end);
+}
+
+@keyframes fadeAnim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}

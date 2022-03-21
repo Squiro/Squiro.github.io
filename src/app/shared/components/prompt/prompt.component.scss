@@ -1,0 +1,23 @@
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    // position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    input {
+        color: var(--main-color);
+        font-family: var(--font-family);
+        font-size: var(--font-size);
+        font-weight: 600;
+        background-color: black;
+        border: black solid;
+        flex-grow: 1;
+        margin: 0 4px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
