@@ -16,6 +16,7 @@ import { KillComponent } from '../../../pages/kill/kill.component';
 import { ProgrammingComponent } from 'src/app/pages/projects/programming/programming.component';
 import { ArduinoComponent } from 'src/app/pages/projects/arduino/arduino.component';
 import { GamesComponent } from 'src/app/pages/projects/games/games.component';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-prompt',
@@ -33,7 +34,7 @@ export class PromptComponent implements OnInit, OnDestroy {
     @Output()
     componentType = new EventEmitter<Type<any> | string>();
 
-    constructor(private store: Store) {
+    constructor(private store: Store, private router: Router) {
         this.input = "";
         this.currentDir = "home";
         this.unsubscribeAll = new Subject();
@@ -112,6 +113,9 @@ export class PromptComponent implements OnInit, OnDestroy {
                 break;
             case 'kill':                
                 this.componentType.emit(KillComponent);
+                break;
+            case 'startx':                
+                this.router.navigate(['/home/']);
                 break;
             default:             
                 this.store.dispatch(new GeneralActions.SetCurrentError(`-gOS: ${splitInput[0]}: command not found`));

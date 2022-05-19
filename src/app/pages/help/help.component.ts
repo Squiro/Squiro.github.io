@@ -17,6 +17,7 @@ export class HelpComponent extends BaseComponent {
             `--> cd <directory_name>: access directory`,
             `--> show: shows current directory contents (useful if you cleared the screen)`,  
             `--> clear: clears the screen`,
+            `--> startx: start GUI`,
             `--> kill: please don't`
         ]);
 

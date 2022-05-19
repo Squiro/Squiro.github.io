@@ -1,0 +1,37 @@
+@import "xp.css/dist/XP.css";
+
+body {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/assets/bliss.jpg");
+    background-size: cover;
+}
+
+app-gui-home {
+
+    article {
+        max-height: 60vh;
+        height: 60vh;
+        overflow-y: scroll;
+    }
+    .window {
+        margin: 2em;
+        width: 70vw;
+    }
+    font-weight: 400;
+    color: black;
+
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+    }
+    
+    h2 {
+        margin: 0.5em 0;
+        font-size: 2em;
+    }
+}
+
+
+

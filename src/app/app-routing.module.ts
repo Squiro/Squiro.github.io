@@ -6,7 +6,15 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: "home",
+    loadChildren: () =>
+                import("./pages//GUI/gui.module").then(
+                    (m) => m.GUIModule
+    ),
   }
+
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { ComponentInjectionDirective } from 'src/app/shared/directives/component.injection.directive';
 import { DirectoriesActions } from 'src/app/store/directories/directories.actions';
@@ -9,7 +9,7 @@ import { generateDirectories } from '../../store/directories/directories.fakeapi
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent extends BaseComponent implements OnInit, AfterContentInit {   
 
@@ -19,7 +19,7 @@ export class HomeComponent extends BaseComponent implements OnInit, AfterContent
     { 
         super(store);
         generateDirectories();
-        this.addComponentString(['Home', 'Use help, h, or ? to see a list of available commands', 'GUI Coming soon!']);
+        this.addComponentString(['Home', 'Use help, h, or ? to see a list of available commands', '--> USE startx TO START GUI!!!!! <--']);
         this.store.dispatch(new DirectoriesActions.SetCurrent(directoriesList[0]));
     }
 

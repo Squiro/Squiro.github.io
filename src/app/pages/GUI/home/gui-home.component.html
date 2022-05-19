@@ -1,0 +1,44 @@
+<app-splash-screen #splash></app-splash-screen>
+
+
+<div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">This is it. The GUI has arrived.</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <menu role="tablist">
+        <button *ngFor="let tab of tabs" [attr.aria-selected]="tab.selected ? 'true' : 'null'" (click)="this.onTabClick(tab.id)">{{tab.displayName}}</button>  
+      </menu>
+      <article role="tabpanel" [hidden]="!this.tabs[0].selected">
+          <app-gui-about-me></app-gui-about-me>
+      </article>
+  
+      <article role="tabpanel" [hidden]="!this.tabs[1].selected">
+        <app-gui-experience></app-gui-experience>
+      </article>
+  
+      <article role="tabpanel" [hidden]="!this.tabs[2].selected">
+        <app-gui-education></app-gui-education>        
+      </article>
+
+      <article role="tabpanel" [hidden]="!this.tabs[3].selected">
+        <app-gui-projects></app-gui-projects>        
+      </article>
+
+      <article role="tabpanel" [hidden]="!this.tabs[4].selected">
+        <app-gui-about-site></app-gui-about-site>        
+      </article>
+
+      <section class="field-row" style="justify-content: flex-end">
+        <button>OK</button>
+        <button>Cancel</button>
+      </section>
+    </div>
+
+
+</div>

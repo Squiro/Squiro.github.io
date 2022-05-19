@@ -16,6 +16,7 @@ import { KillComponent } from './pages/kill/kill.component';
 import { ProgrammingComponent } from './pages/projects/programming/programming.component';
 import { ArduinoComponent } from './pages/projects/arduino/arduino.component';
 import { GamesComponent } from './pages/projects/games/games.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { GamesComponent } from './pages/projects/games/games.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
     AppStoreModule,
