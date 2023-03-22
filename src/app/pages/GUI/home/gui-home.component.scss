@@ -13,6 +13,7 @@ app-gui-home {
         height: 60vh;
         overflow-y: scroll;
     }
+
     .window {
         margin: 2em;
         width: 70vw;
@@ -34,3 +35,9 @@ app-gui-home {
 
 
 
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    menu[role=tablist] {
+        display: flex;
+        flex-direction: column;
+    }
+}
